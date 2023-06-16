@@ -184,14 +184,7 @@ export default function PrimarySearchAppBar({ arhamic, setArhamic }) {
             open={isMobileMenuOpen}
             onClose={handleMobileMenuClose}
         >
-            <MenuItem onClick={() => handleExportToExcel()}>
-                <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-                    <Badge>
-                        <IosShareIcon />
-                    </Badge>
-                </IconButton>
-                <p>Export chat</p>
-            </MenuItem>
+      
 
 
             {/* <MenuItem>
@@ -314,7 +307,7 @@ export default function PrimarySearchAppBar({ arhamic, setArhamic }) {
                         component="div"
                         sx={{ display: { xs: 'none', sm: 'block' } }}
                     >
-                        Chatty Ai
+                        Simple Todo
                     </Typography>
 
 
@@ -323,14 +316,6 @@ export default function PrimarySearchAppBar({ arhamic, setArhamic }) {
                     <Box sx={{ flexGrow: 1 }} />
 
                     <Box sx={{ display: { xs: 'none', md: 'flex', gap: 9 } }}>
-
-                        <Tooltip title="Export chat">
-                            <IconButton onClick={() => handleExportToExcel()} size="large" aria-label="show 4 new mails" color="inherit">
-                                <Badge>
-                                    <IosShareIcon />
-                                </Badge>
-                            </IconButton>
-                        </Tooltip>
 
                         {/* <Tooltip title="Notifications">
 
@@ -346,27 +331,7 @@ export default function PrimarySearchAppBar({ arhamic, setArhamic }) {
                         </Tooltip> */}
 
 
-                        <Tooltip title={!arhamic ? "English" : "Arhamic"}>
-
-                            <IconButton
-                                onClick={() => setArhamic(!arhamic)}
-                                size="large"
-                                aria-label="show 17 new notifications"
-                                color="inherit"
-                            >
-                                <Badge badgeContent={!arhamic ? "English" : "Arhamic"} color={state?.darkMode ? "secondary" : "warning"}>
-
-                                    {!arhamic ?
-
-                                        <PublicIcon />
-                                        :
-                                        <TranslateIcon />
-
-                                    }
-                                </Badge>
-                            </IconButton>
-                        </Tooltip>
-
+                   
 
 
                         <Tooltip title="Setting">

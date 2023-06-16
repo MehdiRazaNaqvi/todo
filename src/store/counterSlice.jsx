@@ -10,7 +10,8 @@ const initialState = {
 
     currentUser: {},
     darkMode: false,
-    chat: []
+    steps: [],
+
 
 
 
@@ -46,16 +47,9 @@ export const counterSlice = createSlice({
             state.chat = []
         },
 
-        addToChat: (state, action) => {
-            state.chat?.push(action.payload)
+        addTodo: (state, action) => {
+            state.steps?.push(action.payload)
         },
-
-
-        setChat: (state, action) => {
-            state.chat = action.payload
-        },
-
-
 
 
 
@@ -73,6 +67,6 @@ export const counterSlice = createSlice({
 
 
 
-export const { switchMode, login, logout, addToChat, setChat } = counterSlice.actions
+export const { switchMode, login, logout, addTodo } = counterSlice.actions
 
 export default counterSlice.reducer
